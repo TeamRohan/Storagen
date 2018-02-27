@@ -7,6 +7,8 @@ target 'Storagen' do
 
   # Pods for Storagen
 
+pod 'Firebase/Core'
+
   target 'StoragenTests' do
     inherit! :search_paths
     # Pods for testing
