@@ -12,6 +12,7 @@ import FirebaseAuth
 import FirebaseStorage
 import CoreLocation
 import MapKit
+import RSKPlaceholderTextView
 
 class AddANewPropertyViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate{
@@ -20,8 +21,8 @@ UINavigationControllerDelegate{
     @IBOutlet weak var propertySizeTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
-    @IBOutlet weak var endDateTextView: UITextView!
-    @IBOutlet weak var startDateTextView: UITextView!
+    @IBOutlet weak var endDateTextView: RSKPlaceholderTextView!
+    @IBOutlet weak var startDateTextView: RSKPlaceholderTextView!
     @IBOutlet weak var propertImageView: UIImageView!
     
     

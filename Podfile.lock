@@ -53,6 +53,7 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - RSKPlaceholderTextView (3.0.0)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -61,6 +62,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - GooglePlaces
   - GooglePlacesSearchController
+  - RSKPlaceholderTextView
 
 SPEC CHECKSUMS:
   Firebase: 7d3b8cd837ad9fcd391657734c0d56dab8e9a5a3
@@ -77,7 +79,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5bb1eae636127de695590f50e7d248483eb891e6
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  RSKPlaceholderTextView: 0ce73a19998e236323b3f1f16bf4a4e4a76c2c28
 
-PODFILE CHECKSUM: 05689129af633d78abb73b905c3dfedc2cb3120c
+PODFILE CHECKSUM: 207db0ba6cb604b74759ec73e30108ced2740650
 
 COCOAPODS: 1.3.1

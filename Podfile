@@ -13,6 +13,7 @@ pod 'Firebase/Database'
 pod 'Firebase/Storage’
 pod 'GooglePlaces'
 pod ‘GooglePlacesSearchController’
+pod 'RSKPlaceholderTextView'
 
   target 'StoragenTests' do
     inherit! :search_paths
