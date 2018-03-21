@@ -16,7 +16,10 @@
 		9DD9BA7A202BC14C0019E7F1 /* StoragenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9BA79202BC14C0019E7F1 /* StoragenUITests.swift */; };
 		A397709CC577EC5486364B70 /* Pods_StoragenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC6728A0C5E21B855FA21F4 /* Pods_StoragenUITests.framework */; };
 		AFA4E1F92936737C2A789868 /* Pods_Storagen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9801BE5043C0E0B4D925766 /* Pods_Storagen.framework */; };
+		D5356A43204E065200F9513D /* AddANewPropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5356A42204E065200F9513D /* AddANewPropertyViewController.swift */; };
 		D598AA582044D65500AE3520 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D598AA572044D65500AE3520 /* GoogleService-Info.plist */; };
+		D5D210B320607AF8004B5CF7 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D210B220607AF8004B5CF7 /* LocationSearchTable.swift */; };
+		D5F8EF47204C9CE2001ABCE9 /* Nikhil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F8EF46204C9CE2001ABCE9 /* Nikhil.storyboard */; };
 		ED4607B75B64CC3E5865B864 /* Pods_StoragenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604DF38216F30E9AED72B6AA /* Pods_StoragenTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +63,10 @@
 		B9801BE5043C0E0B4D925766 /* Pods_Storagen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Storagen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22FB9E4C1539FF5B8340142 /* Pods-StoragenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoragenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StoragenTests/Pods-StoragenTests.release.xcconfig"; sourceTree = "<group>"; };
 		D4CEA9843F1699185412C75E /* Pods-StoragenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoragenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StoragenUITests/Pods-StoragenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D5356A42204E065200F9513D /* AddANewPropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddANewPropertyViewController.swift; sourceTree = "<group>"; };
 		D598AA572044D65500AE3520 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D5D210B220607AF8004B5CF7 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		D5F8EF46204C9CE2001ABCE9 /* Nikhil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Nikhil.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,9 @@
 				9DD9BA56202BC14C0019E7F1 /* AppDelegate.swift */,
 				9DD9BA58202BC14C0019E7F1 /* ViewController.swift */,
 				9DD9BA5A202BC14C0019E7F1 /* Main.storyboard */,
+				D5F8EF46204C9CE2001ABCE9 /* Nikhil.storyboard */,
+				D5D210B220607AF8004B5CF7 /* LocationSearchTable.swift */,
+				D5356A42204E065200F9513D /* AddANewPropertyViewController.swift */,
 				9DD9BA60202BC14C0019E7F1 /* Assets.xcassets */,
 				9DD9BA65202BC14C0019E7F1 /* Info.plist */,
 				D598AA572044D65500AE3520 /* GoogleService-Info.plist */,
@@ -287,6 +296,7 @@
 				9DD9BA61202BC14C0019E7F1 /* Assets.xcassets in Resources */,
 				9DD9BA5C202BC14C0019E7F1 /* Main.storyboard in Resources */,
 				D598AA582044D65500AE3520 /* GoogleService-Info.plist in Resources */,
+				D5F8EF47204C9CE2001ABCE9 /* Nikhil.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,12 +324,18 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Storagen/Pods-Storagen-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GooglePlacesSearchController/GooglePlacesSearchController.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GooglePlacesSearchController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,9 +448,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Storagen/Pods-Storagen-resources.sh",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -465,6 +484,8 @@
 			files = (
 				9DD9BA59202BC14C0019E7F1 /* ViewController.swift in Sources */,
 				9DD9BA57202BC14C0019E7F1 /* AppDelegate.swift in Sources */,
+				D5356A43204E065200F9513D /* AddANewPropertyViewController.swift in Sources */,
+				D5D210B320607AF8004B5CF7 /* LocationSearchTable.swift in Sources */,
 				9DD9BA5F202BC14C0019E7F1 /* Storagen.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

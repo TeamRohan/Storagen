@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A171F47C29078B3678855EAFD8FB9F1D"
+               BlueprintIdentifier = "9AEC3BE21CFFC1CAF9D4AA3D8DE6AE65"
                BuildableName = "Pods_Storagen.framework"
                BlueprintName = "Pods-Storagen"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A171F47C29078B3678855EAFD8FB9F1D"
+            BlueprintIdentifier = "9AEC3BE21CFFC1CAF9D4AA3D8DE6AE65"
             BuildableName = "Pods_Storagen.framework"
             BlueprintName = "Pods-Storagen"
             ReferencedContainer = "container:Pods.xcodeproj">
