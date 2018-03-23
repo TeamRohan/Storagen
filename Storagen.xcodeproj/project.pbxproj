@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E6A170820659875001B1331 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6A170720659875001B1331 /* Login.storyboard */; };
+		7E6A170A2065AAEE001B1331 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A17092065AAEE001B1331 /* LoginViewController.swift */; };
+		7E6A170C2065AAFE001B1331 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A170B2065AAFE001B1331 /* RegisterViewController.swift */; };
 		9DD9BA57202BC14C0019E7F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9BA56202BC14C0019E7F1 /* AppDelegate.swift */; };
 		9DD9BA59202BC14C0019E7F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9BA58202BC14C0019E7F1 /* ViewController.swift */; };
 		9DD9BA5C202BC14C0019E7F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DD9BA5A202BC14C0019E7F1 /* Main.storyboard */; };
@@ -42,6 +45,9 @@
 		2B16827C36D151C2245AB2AA /* Pods-StoragenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoragenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoragenUITests/Pods-StoragenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D9BB41EA3AB461B39ED8674 /* Pods-StoragenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoragenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoragenTests/Pods-StoragenTests.debug.xcconfig"; sourceTree = "<group>"; };
 		604DF38216F30E9AED72B6AA /* Pods_StoragenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoragenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E6A170720659875001B1331 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		7E6A17092065AAEE001B1331 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7E6A170B2065AAFE001B1331 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		926170DAB081F5DD3D22FA7E /* Pods-Storagen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storagen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Storagen/Pods-Storagen.debug.xcconfig"; sourceTree = "<group>"; };
 		9DD9BA53202BC14C0019E7F1 /* Storagen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storagen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD9BA56202BC14C0019E7F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +152,9 @@
 				9DD9BA65202BC14C0019E7F1 /* Info.plist */,
 				D598AA572044D65500AE3520 /* GoogleService-Info.plist */,
 				9DD9BA5D202BC14C0019E7F1 /* Storagen.xcdatamodeld */,
+				7E6A170720659875001B1331 /* Login.storyboard */,
+				7E6A17092065AAEE001B1331 /* LoginViewController.swift */,
+				7E6A170B2065AAFE001B1331 /* RegisterViewController.swift */,
 			);
 			path = Storagen;
 			sourceTree = "<group>";
@@ -284,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E6A170820659875001B1331 /* Login.storyboard in Resources */,
 				9DD9BA61202BC14C0019E7F1 /* Assets.xcassets in Resources */,
 				9DD9BA5C202BC14C0019E7F1 /* Main.storyboard in Resources */,
 				D598AA582044D65500AE3520 /* GoogleService-Info.plist in Resources */,
@@ -463,6 +473,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E6A170A2065AAEE001B1331 /* LoginViewController.swift in Sources */,
+				7E6A170C2065AAFE001B1331 /* RegisterViewController.swift in Sources */,
 				9DD9BA59202BC14C0019E7F1 /* ViewController.swift in Sources */,
 				9DD9BA57202BC14C0019E7F1 /* AppDelegate.swift in Sources */,
 				9DD9BA5F202BC14C0019E7F1 /* Storagen.xcdatamodeld in Sources */,
