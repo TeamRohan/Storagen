@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E2B173F20675726003515C2 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B173E20675726003515C2 /* ForgotPasswordViewController.swift */; };
 		7E6A170820659875001B1331 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E6A170720659875001B1331 /* Login.storyboard */; };
 		7E6A170A2065AAEE001B1331 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A17092065AAEE001B1331 /* LoginViewController.swift */; };
 		7E6A170C2065AAFE001B1331 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A170B2065AAFE001B1331 /* RegisterViewController.swift */; };
@@ -45,6 +46,7 @@
 		2B16827C36D151C2245AB2AA /* Pods-StoragenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoragenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoragenUITests/Pods-StoragenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D9BB41EA3AB461B39ED8674 /* Pods-StoragenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoragenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoragenTests/Pods-StoragenTests.debug.xcconfig"; sourceTree = "<group>"; };
 		604DF38216F30E9AED72B6AA /* Pods_StoragenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoragenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E2B173E20675726003515C2 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		7E6A170720659875001B1331 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		7E6A17092065AAEE001B1331 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7E6A170B2065AAFE001B1331 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				7E6A170720659875001B1331 /* Login.storyboard */,
 				7E6A17092065AAEE001B1331 /* LoginViewController.swift */,
 				7E6A170B2065AAFE001B1331 /* RegisterViewController.swift */,
+				7E2B173E20675726003515C2 /* ForgotPasswordViewController.swift */,
 			);
 			path = Storagen;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 			files = (
 				7E6A170A2065AAEE001B1331 /* LoginViewController.swift in Sources */,
 				7E6A170C2065AAFE001B1331 /* RegisterViewController.swift in Sources */,
+				7E2B173F20675726003515C2 /* ForgotPasswordViewController.swift in Sources */,
 				9DD9BA59202BC14C0019E7F1 /* ViewController.swift in Sources */,
 				9DD9BA57202BC14C0019E7F1 /* AppDelegate.swift in Sources */,
 				9DD9BA5F202BC14C0019E7F1 /* Storagen.xcdatamodeld in Sources */,
