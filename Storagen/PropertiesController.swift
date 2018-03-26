@@ -42,7 +42,11 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        propertiesTableView.deselectRow(at: indexPath, animated: false)
+        print("hrt")
+        let nav = PropertyDetailController()
+        nav.property = properties[indexPath.row]
+        self.navigationController?.pushViewController(nav, animated: true)
+//        propertiesTableView.deselectRow(at: indexPath, animated: false)
     }
 
     @IBOutlet weak var propertiesTableView: UITableView!
@@ -50,6 +54,8 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
     var properties: [Property] = []
     var ref: DatabaseReference!
     var pref: StorageReference!
+    
+    
     
     let refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -77,12 +83,13 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
         properties.removeAll()
         ref.child("Properties").observeSingleEvent(of: .value, with:
             { (snapshot) in
-                let value = snapshot.value as? NSDictionary
-                for (id, obj) in value! {
+                guard let value = snapshot.value as? NSDictionary else { return }
+                for (id, obj) in value {
                     let propId = id as! String
                     let dictVals = obj as! [String: Any]
                     let property = Property(propertyId: propId, dictionary: dictVals)
                     print(property.toString())
+                    self.properties.append(property)
                     self.properties.append(property)
                 }
                 self.propertiesTableView.reloadData()
@@ -105,15 +112,22 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
         // Dispose of any resources that can be recreated.
     }
     
+    
 
     /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if(segue.identifier == "propDetailSegue") {
+            let controller = segue.destination as! PropertyDetailController
+            let clickedCell = sender as! PropertiesCell
+    
+//            controller.property = properties[clickedCell.]
+        }
     }
-    */
 
 }

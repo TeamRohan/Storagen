@@ -44,7 +44,7 @@ class PropertiesCell: UITableViewCell {
         self.propertyAddress.text = obj.propertyAddress
         self.propertySize.text = obj.propertySize
         self.propertyDescription.text = obj.propertyDescription
-        self.propertyImage.af_setImage(withURL: obj.imageUrl)
+        self.propertyImage.af_setImage(withURL: obj.propertyImageUrl)
     }
 
 }
