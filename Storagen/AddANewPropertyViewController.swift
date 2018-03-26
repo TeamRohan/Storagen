@@ -25,6 +25,7 @@ UINavigationControllerDelegate{
     @IBOutlet weak var startDateTextView: RSKPlaceholderTextView!
     @IBOutlet weak var propertImageView: UIImageView!
     
+    @IBOutlet weak var pricePerNightTextField: UITextField!
     
     var properAddress = "";
     
@@ -173,7 +174,7 @@ UINavigationControllerDelegate{
             //}
         })
         
-        let values = ["Property Size": self.propertySizeTextField.text, "Address": self.addressTextField.text!, "Description": self.descriptionTextField.text!, "Start Date": self.startDateTextView.text!, "End Date": self.endDateTextView.text!, "Timestamp": today!] as [String : Any]
+        let values = ["Property Size": self.propertySizeTextField.text, "Address": self.addressTextField.text!, "Description": self.descriptionTextField.text!, "Start Date": self.startDateTextView.text!, "End Date": self.endDateTextView.text!, "Price": self.pricePerNightTextField.text!, "Timestamp": today!] as [String : Any]
         
         self.ref.child("User").child("Nikhil").setValue(values)
     
