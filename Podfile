@@ -8,6 +8,13 @@ target 'Storagen' do
   # Pods for Storagen
 
 pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Storage’
+pod 'GooglePlaces'
+pod 'Alamofire'
+pod 'AlamofireImage'
+pod ‘GooglePlacesSearchController’
 
   target 'StoragenTests' do
     inherit! :search_paths
