@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '84268159524FF90BED862831C399CC40'
-               BlueprintName = 'RSKPlaceholderTextView'
+               BlueprintIdentifier = 'DA98DAEF34654FF7BF3606F2AB9C345D'
+               BlueprintName = 'SwiftyUUID'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'RSKPlaceholderTextView.framework'>
+               BuildableName = 'SwiftyUUID.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

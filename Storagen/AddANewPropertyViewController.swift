@@ -13,6 +13,8 @@ import FirebaseStorage
 import CoreLocation
 import MapKit
 import RSKPlaceholderTextView
+import SwiftyUUID
+
 
 class AddANewPropertyViewController: UIViewController, UITextViewDelegate, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate{
@@ -164,7 +166,13 @@ UINavigationControllerDelegate{
         //let propertyRef = pref.child("images/property.jpg");
         guard let img = propertImageView.image else { return }
         let uploadData = UIImagePNGRepresentation(img)
-        pref.child("check").putData(uploadData!, metadata: nil, completion: {(metadata, error) in
+        
+        let uuid = SwiftyUUID.UUID()
+
+        let uuidString = uuid.CanonicalString()
+
+        
+        pref.child(uuidString).putData(uploadData!, metadata: nil, completion: {(metadata, error) in
             //if(self.singlePhoto == true) {
                 //let toPut = ref.child("users").child(userID!).child("userPhoto");
             //let toPut = self.pref.child("userPhoto");
@@ -174,9 +182,42 @@ UINavigationControllerDelegate{
             //}
         })
         
-        let values = ["Property Size": self.propertySizeTextField.text, "Address": self.addressTextField.text!, "Description": self.descriptionTextField.text!, "Start Date": self.startDateTextView.text!, "End Date": self.endDateTextView.text!, "Price": self.pricePerNightTextField.text!, "Timestamp": today!] as [String : Any]
+        let address = self.addressTextField.text!
         
-        self.ref.child("User").child("Nikhil").setValue(values)
+        //var lat: Double?
+        //var lon: Double?
+        
+        
+        
+        var geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(address) {
+            placemarks, error in
+            
+            var lat:CLLocationDegrees
+            var lon:CLLocationDegrees
+            
+                let placemark = placemarks?.first
+            guard let latTemp = (placemark?.location?.coordinate.latitude) else { return }
+            guard let lonTemp = (placemark?.location?.coordinate.longitude) else { return }
+            
+            lat = latTemp
+            lon = lonTemp
+            
+                print("Lat: \(lat), Lon: \(lon)")
+            
+            
+            let values = ["Size": self.propertySizeTextField.text, "Address": self.addressTextField.text!, "Description": self.descriptionTextField.text!, "Start Date": self.startDateTextView.text!, "End Date": self.endDateTextView.text!, "Price": self.pricePerNightTextField.text!, "Timestamp": today!, "Latitude": String(describing: lat), "Longitude": String(describing: lon)] as [String : Any]
+            
+            
+            let ID2 = SwiftyUUID.UUID()
+            
+            let IDSTRING = ID2.CanonicalString()
+
+            self.ref.child("Users").child((Auth.auth().currentUser?.uid)!).child("property").setValue(IDSTRING)
+            self.ref.child("Properties").child(IDSTRING).setValue(values)
+            
+        }
+        
     
     }
     

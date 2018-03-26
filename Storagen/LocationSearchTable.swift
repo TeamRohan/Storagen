@@ -78,7 +78,7 @@ class LocationSearchTable : UITableViewController {
         // put a space between "Washington" and "DC"
         let secondSpace = (selectedItem.subAdministrativeArea != nil && selectedItem.administrativeArea != nil) ? " " : ""
         let addressLine = String(
-            format:"%@%@%@%@%@%@%@",
+            format:"%@%@%@%@%@%@%@%@%@",
             // street number
             selectedItem.subThoroughfare ?? "",
             firstSpace,
@@ -89,7 +89,8 @@ class LocationSearchTable : UITableViewController {
             selectedItem.locality ?? "",
             secondSpace,
             // state
-            selectedItem.administrativeArea ?? ""
+            selectedItem.administrativeArea ?? "",
+            secondSpace, selectedItem.postalCode ?? "No"
         )
         return addressLine
     }
