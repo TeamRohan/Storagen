@@ -14,6 +14,7 @@ pod 'Firebase/Storage’
 pod 'GooglePlaces'
 pod 'Alamofire'
 pod 'AlamofireImage'
+pod 'LBTAComponents'
 pod ‘GooglePlacesSearchController’
 
   target 'StoragenTests' do
