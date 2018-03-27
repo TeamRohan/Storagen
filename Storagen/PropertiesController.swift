@@ -76,6 +76,15 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
         self.propertiesTableView.addSubview(self.refreshControl)
         self.propertiesTableView.separatorStyle = .none
         getProperties()
+        
+        let dan = UIBarButtonItem(title: "+", style: .done, target: self, action: #selector(addProperty))
+        
+        
+        self.navigationItem.rightBarButtonItem = dan
+    }
+    
+    @objc func addProperty() {
+        
     }
     
     
