@@ -19,7 +19,7 @@
         <!--Properties-->
         <scene sceneID="Q2u-8N-EQy">
             <objects>
-                <viewController title="Properties" id="g5B-P3-RJi" customClass="PropertiesController" customModule="Storagen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Tablo" title="Properties" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g5B-P3-RJi" customClass="PropertiesController" customModule="Storagen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hTK-9P-5cd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jV-8D-1MU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="105" y="143"/>
+            <point key="canvasLocation" x="375" y="142"/>
         </scene>
         <!--Property Detail Controller-->
         <scene sceneID="oel-hX-p0W">

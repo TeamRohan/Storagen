@@ -15,6 +15,7 @@ pod 'GooglePlaces'
 pod 'Alamofire'
 pod 'AlamofireImage'
 pod ‘GooglePlacesSearchController’
+pod 'LBTAComponents'
 
   target 'StoragenTests' do
     inherit! :search_paths

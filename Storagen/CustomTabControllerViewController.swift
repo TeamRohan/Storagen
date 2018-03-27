@@ -14,12 +14,21 @@ class CustomTabControllerViewController: UITabBarController {
         super.viewDidLoad()
         
         
+        let storyboard : UIStoryboard = UIStoryboard(name: "MainPageStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Tablo") as! PropertiesController
+        
+      
+        
+        let navigationController = UINavigationController(rootViewController: vc)
+
+        
+        
         let propsController = UINavigationController(rootViewController: PropertiesController())
         propsController.tabBarItem.image = #imageLiteral(resourceName: "ic_properties.png")
         propsController.tabBarItem.title = "Properties"
         let chatController = UINavigationController(rootViewController: Chat())
         propsController.tabBarItem.title = "Chat"
-        viewControllers = [ chatController]
+        viewControllers = [navigationController, chatController]
         // Do any additional setup after loading the view.
     }
 

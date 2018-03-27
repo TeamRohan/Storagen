@@ -71,8 +71,12 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         ref = Database.database().reference()
         pref = Storage.storage().reference()
-        propertiesTableView.delegate = self
+        self.tabBarController?.tabBar.isHidden = false
+
+        
         propertiesTableView.dataSource = self
+        propertiesTableView.delegate = self
+
         self.propertiesTableView.addSubview(self.refreshControl)
         self.propertiesTableView.separatorStyle = .none
         getProperties()
