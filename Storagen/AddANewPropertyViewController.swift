@@ -63,6 +63,9 @@ UINavigationControllerDelegate{
         
         pricePerNightTextField.attributedPlaceholder = NSAttributedString(string: "$20", attributes: [NSAttributedStringKey.foregroundColor: startDateTextView.placeholderColor])
         
+        propertImageView.clipsToBounds = true;
+        propertImageView.layer.cornerRadius = 4;
+        
         
         createDatePicker();
         createDatePicker2();
