@@ -7,11 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D4C150B206C25410086D15B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4C150A206C25410086D15B /* Assets.xcassets */; };
+		9D5A03312065923900F62486 /* MainPageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5A03302065923900F62486 /* MainPageStoryboard.storyboard */; };
+		9D5A03332065936800F62486 /* PropertiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A03322065936800F62486 /* PropertiesController.swift */; };
+		9D5A033520671C0000F62486 /* PropertiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A033420671C0000F62486 /* PropertiesCell.swift */; };
+		9D5A033720671F5A00F62486 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A033620671F5A00F62486 /* Property.swift */; };
+		9D5A03392069AEE200F62486 /* PropertyDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A03382069AEE200F62486 /* PropertyDetailController.swift */; };
+		9D5A033B2069B8F500F62486 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A033A2069B8F500F62486 /* ProfileViewController.swift */; };
+		9D5A033D2069B90000F62486 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A033C2069B90000F62486 /* RegisterViewController.swift */; };
+		9D5A033F2069B95200F62486 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A033E2069B95200F62486 /* ForgotPasswordViewController.swift */; };
+		9D5A03412069BCCB00F62486 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A03402069BCCB00F62486 /* LoginViewController.swift */; };
+		9D5A03432069C22E00F62486 /* ChatClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A03422069C22E00F62486 /* ChatClass.swift */; };
+		9D5A03452069C23A00F62486 /* Chatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A03442069C23A00F62486 /* Chatter.swift */; };
+		9D5A03472069C24000F62486 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A03462069C24000F62486 /* Chat.swift */; };
+		9D5A03492069C3D500F62486 /* CustomTabControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A03482069C3D500F62486 /* CustomTabControllerViewController.swift */; };
+		9D5A034B206C20E900F62486 /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A034A206C20E900F62486 /* ChatUser.swift */; };
 		9DD9BA57202BC14C0019E7F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9BA56202BC14C0019E7F1 /* AppDelegate.swift */; };
 		9DD9BA59202BC14C0019E7F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9BA58202BC14C0019E7F1 /* ViewController.swift */; };
 		9DD9BA5C202BC14C0019E7F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DD9BA5A202BC14C0019E7F1 /* Main.storyboard */; };
 		9DD9BA5F202BC14C0019E7F1 /* Storagen.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9BA5D202BC14C0019E7F1 /* Storagen.xcdatamodeld */; };
-		9DD9BA61202BC14C0019E7F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DD9BA60202BC14C0019E7F1 /* Assets.xcassets */; };
 		9DD9BA6F202BC14C0019E7F1 /* StoragenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9BA6E202BC14C0019E7F1 /* StoragenTests.swift */; };
 		9DD9BA7A202BC14C0019E7F1 /* StoragenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9BA79202BC14C0019E7F1 /* StoragenUITests.swift */; };
 		A397709CC577EC5486364B70 /* Pods_StoragenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC6728A0C5E21B855FA21F4 /* Pods_StoragenUITests.framework */; };
@@ -43,12 +57,26 @@
 		2D9BB41EA3AB461B39ED8674 /* Pods-StoragenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoragenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoragenTests/Pods-StoragenTests.debug.xcconfig"; sourceTree = "<group>"; };
 		604DF38216F30E9AED72B6AA /* Pods_StoragenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoragenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		926170DAB081F5DD3D22FA7E /* Pods-Storagen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storagen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Storagen/Pods-Storagen.debug.xcconfig"; sourceTree = "<group>"; };
+		9D4C150A206C25410086D15B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D5A03302065923900F62486 /* MainPageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPageStoryboard.storyboard; sourceTree = "<group>"; };
+		9D5A03322065936800F62486 /* PropertiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesController.swift; sourceTree = "<group>"; };
+		9D5A033420671C0000F62486 /* PropertiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesCell.swift; sourceTree = "<group>"; };
+		9D5A033620671F5A00F62486 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		9D5A03382069AEE200F62486 /* PropertyDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDetailController.swift; sourceTree = "<group>"; };
+		9D5A033A2069B8F500F62486 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9D5A033C2069B90000F62486 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9D5A033E2069B95200F62486 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		9D5A03402069BCCB00F62486 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9D5A03422069C22E00F62486 /* ChatClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatClass.swift; path = ../../../Downloads/ChatClass.swift; sourceTree = "<group>"; };
+		9D5A03442069C23A00F62486 /* Chatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chatter.swift; path = ../../../Downloads/Chatter.swift; sourceTree = "<group>"; };
+		9D5A03462069C24000F62486 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chat.swift; path = ../../../Downloads/Chat.swift; sourceTree = "<group>"; };
+		9D5A03482069C3D500F62486 /* CustomTabControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabControllerViewController.swift; sourceTree = "<group>"; };
+		9D5A034A206C20E900F62486 /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
 		9DD9BA53202BC14C0019E7F1 /* Storagen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storagen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD9BA56202BC14C0019E7F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DD9BA58202BC14C0019E7F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9DD9BA5B202BC14C0019E7F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DD9BA5E202BC14C0019E7F1 /* Storagen.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Storagen.xcdatamodel; sourceTree = "<group>"; };
-		9DD9BA60202BC14C0019E7F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DD9BA65202BC14C0019E7F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DD9BA6A202BC14C0019E7F1 /* StoragenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoragenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD9BA6E202BC14C0019E7F1 /* StoragenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoragenTests.swift; sourceTree = "<group>"; };
@@ -139,13 +167,27 @@
 		9DD9BA55202BC14C0019E7F1 /* Storagen */ = {
 			isa = PBXGroup;
 			children = (
+				9D4C150A206C25410086D15B /* Assets.xcassets */,
+				9D5A03462069C24000F62486 /* Chat.swift */,
+				9D5A03442069C23A00F62486 /* Chatter.swift */,
+				9D5A03422069C22E00F62486 /* ChatClass.swift */,
 				9DD9BA56202BC14C0019E7F1 /* AppDelegate.swift */,
 				9DD9BA58202BC14C0019E7F1 /* ViewController.swift */,
 				9DD9BA5A202BC14C0019E7F1 /* Main.storyboard */,
-				9DD9BA60202BC14C0019E7F1 /* Assets.xcassets */,
 				9DD9BA65202BC14C0019E7F1 /* Info.plist */,
 				D598AA572044D65500AE3520 /* GoogleService-Info.plist */,
 				9DD9BA5D202BC14C0019E7F1 /* Storagen.xcdatamodeld */,
+				9D5A03302065923900F62486 /* MainPageStoryboard.storyboard */,
+				9D5A03322065936800F62486 /* PropertiesController.swift */,
+				9D5A033420671C0000F62486 /* PropertiesCell.swift */,
+				9D5A033620671F5A00F62486 /* Property.swift */,
+				9D5A03382069AEE200F62486 /* PropertyDetailController.swift */,
+				9D5A033A2069B8F500F62486 /* ProfileViewController.swift */,
+				9D5A033C2069B90000F62486 /* RegisterViewController.swift */,
+				9D5A033E2069B95200F62486 /* ForgotPasswordViewController.swift */,
+				9D5A03402069BCCB00F62486 /* LoginViewController.swift */,
+				9D5A03482069C3D500F62486 /* CustomTabControllerViewController.swift */,
+				9D5A034A206C20E900F62486 /* ChatUser.swift */,
 			);
 			path = Storagen;
 			sourceTree = "<group>";
@@ -284,9 +326,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DD9BA61202BC14C0019E7F1 /* Assets.xcassets in Resources */,
 				9DD9BA5C202BC14C0019E7F1 /* Main.storyboard in Resources */,
 				D598AA582044D65500AE3520 /* GoogleService-Info.plist in Resources */,
+				9D4C150B206C25410086D15B /* Assets.xcassets in Resources */,
+				9D5A03312065923900F62486 /* MainPageStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,12 +357,24 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Storagen/Pods-Storagen-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GooglePlacesSearchController/GooglePlacesSearchController.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GooglePlacesSearchController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,9 +487,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Storagen/Pods-Storagen-resources.sh",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -463,9 +521,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D5A03492069C3D500F62486 /* CustomTabControllerViewController.swift in Sources */,
+				9D5A033D2069B90000F62486 /* RegisterViewController.swift in Sources */,
+				9D5A033720671F5A00F62486 /* Property.swift in Sources */,
 				9DD9BA59202BC14C0019E7F1 /* ViewController.swift in Sources */,
+				9D5A03332065936800F62486 /* PropertiesController.swift in Sources */,
+				9D5A03432069C22E00F62486 /* ChatClass.swift in Sources */,
+				9D5A033520671C0000F62486 /* PropertiesCell.swift in Sources */,
 				9DD9BA57202BC14C0019E7F1 /* AppDelegate.swift in Sources */,
+				9D5A034B206C20E900F62486 /* ChatUser.swift in Sources */,
+				9D5A033F2069B95200F62486 /* ForgotPasswordViewController.swift in Sources */,
+				9D5A03392069AEE200F62486 /* PropertyDetailController.swift in Sources */,
+				9D5A03472069C24000F62486 /* Chat.swift in Sources */,
+				9D5A033B2069B8F500F62486 /* ProfileViewController.swift in Sources */,
 				9DD9BA5F202BC14C0019E7F1 /* Storagen.xcdatamodeld in Sources */,
+				9D5A03452069C23A00F62486 /* Chatter.swift in Sources */,
+				9D5A03412069BCCB00F62486 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

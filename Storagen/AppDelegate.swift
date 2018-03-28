@@ -14,12 +14,17 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        
+        var navigationAppearance = UINavigationBar.appearance()
+        navigationAppearance.tintColor = UIColor(displayP3Red: 224/255, green: 167/255, blue: 61/255, alpha: 1)
+        navigationAppearance.barTintColor = UIColor(displayP3Red: 224/255, green: 167/255, blue: 61/255, alpha: 1)
+        
         FirebaseApp.configure()
+        UIApplication.shared.statusBarStyle = .default
         return true
     }
 
