@@ -2,15 +2,15 @@
 
 User Stories
 
-Objective: Create a platform where students can find others who are willing to lend spaces for storage
+Objective: Create a platform where individuals can find others who are willing to lend spaces for storage
 
-Be able to register both lenders and occupiers. In other words, when registering, first determine the location of the user based on the nearest college within a certain radius. 
+Be able to register individuals. Include the name, email, and password authentication.
 
-Then, allow user to complete profile with contact information and whether he/she is a lender or occupier. If lender, ask questions about the storage space (size, length of time, etc.). Ask similar questions to occupier as well.
+Show a list of properties and display details of each property when pressed.
 
-Create a simple messenger app for the lender and occupier to connect and message about updates.
+Show a profile page with details of the user and be able to update email, password, and log out.
 
-Create notifications to allow lenders and occupiers to receive live updates.
+Create a simple messenger app for individuals to message each other.
 
 Wireframing
 
