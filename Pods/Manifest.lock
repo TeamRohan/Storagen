@@ -57,6 +57,8 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - RSKPlaceholderTextView (3.0.0)
+  - SwiftyUUID (1.1.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -68,6 +70,8 @@ DEPENDENCIES:
   - GooglePlaces
   - GooglePlacesSearchController
   - LBTAComponents
+  - RSKPlaceholderTextView
+  - SwiftyUUID (~> 1.0)
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
@@ -87,7 +91,9 @@ SPEC CHECKSUMS:
   LBTAComponents: c4c8863e0ef6715e378300db148b96a09df656f7
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  RSKPlaceholderTextView: 0ce73a19998e236323b3f1f16bf4a4e4a76c2c28
+  SwiftyUUID: 3cf8e9a58d5f32280766b8de9a0fd0a6e4040f68
 
-PODFILE CHECKSUM: 7d09a4e6c0e134f208de664e07728ceb65227ca5
+PODFILE CHECKSUM: 613d97eea03723b69bfa417114b04a7d5aaa7480
 
 COCOAPODS: 1.4.0
