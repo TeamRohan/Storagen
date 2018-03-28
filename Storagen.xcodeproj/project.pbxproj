@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9D4C150B206C25410086D15B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4C150A206C25410086D15B /* Assets.xcassets */; };
+		9D4C150D206C2E910086D15B /* AddANewPropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4C150C206C2E910086D15B /* AddANewPropertyViewController.swift */; };
+		9D4C150F206C2EBE0086D15B /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4C150E206C2EBE0086D15B /* LocationSearchTable.swift */; };
+		9D4C1511206C2F110086D15B /* Nikhil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4C1510206C2F110086D15B /* Nikhil.storyboard */; };
 		9D5A03312065923900F62486 /* MainPageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5A03302065923900F62486 /* MainPageStoryboard.storyboard */; };
 		9D5A03332065936800F62486 /* PropertiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A03322065936800F62486 /* PropertiesController.swift */; };
 		9D5A033520671C0000F62486 /* PropertiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A033420671C0000F62486 /* PropertiesCell.swift */; };
@@ -58,6 +61,9 @@
 		604DF38216F30E9AED72B6AA /* Pods_StoragenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoragenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		926170DAB081F5DD3D22FA7E /* Pods-Storagen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storagen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Storagen/Pods-Storagen.debug.xcconfig"; sourceTree = "<group>"; };
 		9D4C150A206C25410086D15B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D4C150C206C2E910086D15B /* AddANewPropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddANewPropertyViewController.swift; sourceTree = "<group>"; };
+		9D4C150E206C2EBE0086D15B /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		9D4C1510206C2F110086D15B /* Nikhil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Nikhil.storyboard; sourceTree = "<group>"; };
 		9D5A03302065923900F62486 /* MainPageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPageStoryboard.storyboard; sourceTree = "<group>"; };
 		9D5A03322065936800F62486 /* PropertiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesController.swift; sourceTree = "<group>"; };
 		9D5A033420671C0000F62486 /* PropertiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesCell.swift; sourceTree = "<group>"; };
@@ -188,6 +194,9 @@
 				9D5A03402069BCCB00F62486 /* LoginViewController.swift */,
 				9D5A03482069C3D500F62486 /* CustomTabControllerViewController.swift */,
 				9D5A034A206C20E900F62486 /* ChatUser.swift */,
+				9D4C150C206C2E910086D15B /* AddANewPropertyViewController.swift */,
+				9D4C150E206C2EBE0086D15B /* LocationSearchTable.swift */,
+				9D4C1510206C2F110086D15B /* Nikhil.storyboard */,
 			);
 			path = Storagen;
 			sourceTree = "<group>";
@@ -330,6 +339,7 @@
 				D598AA582044D65500AE3520 /* GoogleService-Info.plist in Resources */,
 				9D4C150B206C25410086D15B /* Assets.xcassets in Resources */,
 				9D5A03312065923900F62486 /* MainPageStoryboard.storyboard in Resources */,
+				9D4C1511206C2F110086D15B /* Nikhil.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +373,8 @@
 				"${BUILT_PRODUCTS_DIR}/GooglePlacesSearchController/GooglePlacesSearchController.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/RSKPlaceholderTextView/RSKPlaceholderTextView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyUUID/SwiftyUUID.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -374,6 +386,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GooglePlacesSearchController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSKPlaceholderTextView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUUID.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -522,7 +536,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D5A03492069C3D500F62486 /* CustomTabControllerViewController.swift in Sources */,
+				9D4C150D206C2E910086D15B /* AddANewPropertyViewController.swift in Sources */,
 				9D5A033D2069B90000F62486 /* RegisterViewController.swift in Sources */,
+				9D4C150F206C2EBE0086D15B /* LocationSearchTable.swift in Sources */,
 				9D5A033720671F5A00F62486 /* Property.swift in Sources */,
 				9DD9BA59202BC14C0019E7F1 /* ViewController.swift in Sources */,
 				9D5A03332065936800F62486 /* PropertiesController.swift in Sources */,

@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
+import FirebaseDatabase
+import FirebaseAuth
 
 class PropertyDetailController: UIViewController {
     
-    var property: Property?
+    var property: Property!
+    var ref: DatabaseReference!
     @IBOutlet weak var ownerLabel: UILabel!
     @IBOutlet weak var endDateLabel: UILabel!
     @IBOutlet weak var startDateLabel: UILabel!
@@ -22,6 +27,7 @@ class PropertyDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black
+        ref = Database.database().reference()
         guard let prop = property else { return }
         guard let url = prop.propertyImageUrl else { return }
         print("\(url) has printed")
@@ -42,8 +48,9 @@ class PropertyDetailController: UIViewController {
     }
     
     @objc func chatMe() {
+        ref.child("Users").child((Auth.auth().currentUser?.uid)!).child("Conversations").child(property.propertyOwnerId).child("Active?").setValue("true")
+        ref.child("Users").child(property.propertyOwnerId).child("Conversations").child((Auth.auth().currentUser?.uid)!).child("Active?").setValue("true")
         
-        print("IT DOES SHIT")
     }
 
     override func didReceiveMemoryWarning() {

@@ -18,8 +18,8 @@ class Property {
     var propertyStartDate: Date
     var propertyEndDate: Date
     var propertyPrice: String
-    var propertyLatitude: Float
-    var propertyLongitude: Float
+    var propertyLatitude: String
+    var propertyLongitude: String
     
     init(propertyAddress: String, propertySize: String,
          propertyDescription: String, imageUrl: String) {
@@ -32,8 +32,8 @@ class Property {
         self.propertyStartDate = Date()
         self.propertyEndDate = propertyStartDate
         self.propertyPrice = ""
-        self.propertyLatitude = 1.0
-        self.propertyLongitude = 1.0
+        self.propertyLatitude = "1.0"
+        self.propertyLongitude = "1.0"
     }
     
     init(propertyId: Any, dictionary: [String: Any]) {
@@ -48,8 +48,8 @@ class Property {
         self.propertyStartDate = Date()
         self.propertyEndDate = propertyStartDate
         self.propertyPrice = dictionary["price"] as! String
-        self.propertyLatitude = dictionary["longitude"] as! Float
-        self.propertyLongitude = dictionary["longitude"] as! Float
+        self.propertyLatitude = dictionary["latitude"] as! String
+        self.propertyLongitude = dictionary["longitude"] as! String
         
     }
     

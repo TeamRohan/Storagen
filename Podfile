@@ -11,11 +11,14 @@ pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'Firebase/Storage’
-pod 'GooglePlaces'
 pod 'Alamofire'
 pod 'AlamofireImage'
 pod 'LBTAComponents'
 pod ‘GooglePlacesSearchController’
+pod 'GooglePlaces'
+pod ‘GooglePlacesSearchController’
+pod 'RSKPlaceholderTextView'
+pod 'SwiftyUUID', '~> 1.0'
 
   target 'StoragenTests' do
     inherit! :search_paths
