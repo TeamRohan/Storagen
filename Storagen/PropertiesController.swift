@@ -99,7 +99,6 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
                     let property = Property(propertyId: propId, dictionary: dictVals)
                     print(property.toString())
                     self.properties.append(property)
-                    self.properties.append(property)
                 }
                 self.propertiesTableView.reloadData()
                 if(self.refreshControl.isRefreshing) {

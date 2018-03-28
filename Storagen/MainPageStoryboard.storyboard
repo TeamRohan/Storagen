@@ -19,7 +19,7 @@
         <!--Properties-->
         <scene sceneID="Q2u-8N-EQy">
             <objects>
-                <viewController title="Properties" id="g5B-P3-RJi" customClass="PropertiesController" customModule="Storagen" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Tablo" title="Properties" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g5B-P3-RJi" customClass="PropertiesController" customModule="Storagen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hTK-9P-5cd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -302,10 +302,10 @@
             </objects>
             <point key="canvasLocation" x="1784.8" y="141.67916041979012"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Controller View Controller-->
         <scene sceneID="jHR-Sv-fom">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jvd-UY-k4h" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jvd-UY-k4h" customClass="CustomTabControllerViewController" customModule="Storagen" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="BZl-CN-ptm">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
