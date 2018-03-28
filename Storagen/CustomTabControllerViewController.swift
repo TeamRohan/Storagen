@@ -19,7 +19,7 @@ class CustomTabControllerViewController: UITabBarController {
         
         
         let navigationController = UINavigationController(rootViewController: vc)
-        
+        navigationController.tabBarItem.image = #imageLiteral(resourceName: "ic_properties")
         
         
         let propsController = PropertiesController()

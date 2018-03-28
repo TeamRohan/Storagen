@@ -66,6 +66,8 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = false
+
         ref = Database.database().reference()
         pref = Storage.storage().reference()
         propertiesTableView.delegate = self
@@ -74,13 +76,16 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
         self.propertiesTableView.separatorStyle = .none
         getProperties()
         
-        let dan = UIBarButtonItem(title: "+", style: .done, target: self, action: #selector(addProperty))
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black]
+        
+        let button = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(addProperty))
+
         
         
-        self.navigationItem.rightBarButtonItem = dan
+        self.navigationItem.rightBarButtonItem = button
         
         self.navigationController?.navigationBar.barStyle = .blackTranslucent
-        self.navigationController?.navigationBar.tintColor = UIColor.init(displayP3Red: 224/255, green: 167/255, blue: 61/255, alpha: 1)
+        self.navigationController?.navigationBar.tintColor = UIColor.black
     }
     
     @objc func addProperty() {

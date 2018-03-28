@@ -45,6 +45,7 @@ UINavigationControllerDelegate{
         
         ref = Database.database().reference()
         pref = Storage.storage().reference()
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black]
         
         createDatePicker();
         createDatePicker2();
