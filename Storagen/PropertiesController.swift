@@ -31,7 +31,7 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let propertyCell = self.propertiesTableView.dequeueReusableCell(withIdentifier: "propertyCell" ,for:indexPath) as! PropertiesCell
         propertyCell.selectionStyle = .default
-        propertyCell.bindObject(obj: properties[indexPath.row])
+        propertyCell.bindObject(obj: properties[indexPath.section])
         return propertyCell
     }
     
@@ -84,23 +84,29 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     @objc func addProperty() {
-        
+        let storyboard : UIStoryboard = UIStoryboard(name: "Nikhil", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AddNewController") as! AddANewPropertyViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     
     func getProperties() {
         properties.removeAll()
-        ref.child("Properties").observeSingleEvent(of: .value, with:
+        ref.child("Properties").observe(.value, with:
             { (snapshot) in
                 guard let value = snapshot.value as? NSDictionary else { return }
+                
+                
+                self.properties = []
                 for (id, obj) in value {
                     let propId = id as! String
                     let dictVals = obj as! [String: Any]
                     let property = Property(propertyId: propId, dictionary: dictVals)
                     print(property.toString())
                     self.properties.append(property)
+                    self.propertiesTableView.reloadData()
+
                 }
-                self.propertiesTableView.reloadData()
                 if(self.refreshControl.isRefreshing) {
                     self.refreshControl.endRefreshing()
                 }
