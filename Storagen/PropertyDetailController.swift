@@ -27,6 +27,8 @@ class PropertyDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black]
         ref = Database.database().reference()
         guard let prop = property else { return }
         guard let url = prop.propertyImageUrl else { return }
@@ -40,7 +42,7 @@ class PropertyDetailController: UIViewController {
         endDateLabel.text = "\(prop.propertyEndDate)"
         ownerLabel.text = prop.propertyOwnerId
         propertyImage.af_setImage(withURL: url)
-        let dan = UIBarButtonItem(title: "Chat", style: .done, target: self, action: #selector(chatMe))
+        let dan = UIBarButtonItem(title: "Chat Me", style: .done, target: self, action: #selector(chatMe))
         self.navigationItem.rightBarButtonItem = dan
         
         
