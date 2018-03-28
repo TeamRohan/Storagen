@@ -14,6 +14,7 @@
 		04519D912069F87D00E6208A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04519D902069F87D00E6208A /* RegisterViewController.swift */; };
 		04519D932069F88600E6208A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04519D922069F88600E6208A /* LoginViewController.swift */; };
 		04519D952069FA4000E6208A /* CustomTabControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04519D942069FA4000E6208A /* CustomTabControllerViewController.swift */; };
+		04F5428A206BEA7200FADC42 /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F54289206BEA7200FADC42 /* ChatUser.swift */; };
 		9D5A03312065923900F62486 /* MainPageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5A03302065923900F62486 /* MainPageStoryboard.storyboard */; };
 		9D5A03332065936800F62486 /* PropertiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A03322065936800F62486 /* PropertiesController.swift */; };
 		9D5A033520671C0000F62486 /* PropertiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A033420671C0000F62486 /* PropertiesCell.swift */; };
@@ -57,6 +58,7 @@
 		04519D902069F87D00E6208A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		04519D922069F88600E6208A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		04519D942069FA4000E6208A /* CustomTabControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabControllerViewController.swift; sourceTree = "<group>"; };
+		04F54289206BEA7200FADC42 /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
 		0FC6728A0C5E21B855FA21F4 /* Pods_StoragenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoragenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B16827C36D151C2245AB2AA /* Pods-StoragenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoragenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoragenUITests/Pods-StoragenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D9BB41EA3AB461B39ED8674 /* Pods-StoragenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoragenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoragenTests/Pods-StoragenTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				04519D902069F87D00E6208A /* RegisterViewController.swift */,
 				04519D8E2069F87200E6208A /* MainPageStoryboard.storyboard */,
 				04519D8A2069F86C00E6208A /* Chat.swift */,
+				04F54289206BEA7200FADC42 /* ChatUser.swift */,
 				04519D892069F86C00E6208A /* ChatClass.swift */,
 				04519D882069F86C00E6208A /* Chatter.swift */,
 				9DD9BA56202BC14C0019E7F1 /* AppDelegate.swift */,
@@ -516,6 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F5428A206BEA7200FADC42 /* ChatUser.swift in Sources */,
 				04519D932069F88600E6208A /* LoginViewController.swift in Sources */,
 				9D5A033720671F5A00F62486 /* Property.swift in Sources */,
 				04519D912069F87D00E6208A /* RegisterViewController.swift in Sources */,

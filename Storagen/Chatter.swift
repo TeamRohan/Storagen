@@ -7,17 +7,18 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+import FirebaseAuth
 
 class Chatter: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    
+    var ref: DatabaseReference!
+
     var bottomConstraint: NSLayoutConstraint?
+    var conversator: chatUser!
     
-    
-    var conversator = String()
-    
-    var arrayka = ["how are you", "short","very long", "Nik is here", "best app ever world eu jk", "hey how are you doing my friend I AM FROM INDIfjmgklfdglfdsgklfdmsgklfmdgklmdfslgkmfdslkgmsflkdgmlkfsdmgklfmdslkgmflkdsmgklfdmsglkmfdlkgmfkdlsgmlkfdmglkfmdslkmgflkdsmgklfdmglkfdmglkdfmglkANA", "Best","pizza","new divide", "WHY ARE YOU SO PROFECIENT IN MAKING PIZZA o_O"
-    ]
+    var arrayka = [ChatClass]()
     
     
     let sendButton: UIButton = {
@@ -54,7 +55,8 @@ class Chatter: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        ref = Database.database().reference()
+
        
         self.tabBarController?.tabBar.isHidden = true
 
@@ -71,12 +73,65 @@ class Chatter: UIViewController, UITableViewDelegate, UITableViewDataSource {
         setupUI()
         
     
-        self.navigationItem.title = conversator
+        self.navigationItem.title = conversator.mail
             self.view.backgroundColor = UIColor(displayP3Red: 21/255, green: 24/255, blue: 33/255, alpha: 1)
         self.tableView.backgroundColor = UIColor(displayP3Red: 21/255, green: 24/255, blue: 33/255, alpha: 1)
    
+        fetchMessages()
+        
         
     }
+    
+    
+    func fetchMessages() {
+        ref.child("Users").child((Auth.auth().currentUser?.uid)!).child("Chats").child(conversator.id).observe(.value, with: {(snapshot) in
+            
+            
+            guard let value = snapshot.value as? NSDictionary else { return }
+            self.arrayka = []
+            let enumerator = snapshot.children
+
+            while let rest = enumerator.nextObject() as? DataSnapshot {
+                if let object = rest.value as? [String: Any] {
+                    let A = object["A"] as! String
+                    let B = object["B"] as! String
+                    let C = object["message"] as! String
+                    
+                    let newMessage = ChatClass(personA: A, personB: B, message: C)
+                    self.arrayka.append(newMessage)
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                    
+                    
+            }
+            }
+            
+           /* for (id, obj) in value {
+                
+            
+                
+                 if let object = obj as? [String: Any] {
+                    
+                    let A = object["A"] as! String
+                    let B = object["B"] as! String
+                    let C = object["message"] as! String
+                    
+                    let newMessage = ChatClass(personA: A, personB: B, message: C)
+                    self.arrayka.append(newMessage)
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                    
+                }
+                
+            }*/
+            
+        }
+        )}
+        
+    
+    
     
     @objc func handleKeyboardNotification(notification: NSNotification) {
         var keyboardHeight = CGFloat(0)
@@ -91,10 +146,12 @@ let keyboardRectangle = keyboardFrame.cgRectValue
             
             if isKeyboardShowing {
                 bottomConstraint?.constant = isKeyboardShowing ? -keyboardHeight : 0
-                
+                if self.arrayka.count != 0 {
                 let indexPath = IndexPath(item: self.arrayka.count-1, section: 0)
                 
-                self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+                
+            self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+                }
             }
             
             else {
@@ -187,6 +244,24 @@ let keyboardRectangle = keyboardFrame.cgRectValue
     
     
    @objc func sendMessage() {
+    
+    if inputTextField.text != "" {
+    
+        let message = ["A":Auth.auth().currentUser?.uid, "B":conversator.id, "message": inputTextField.text] as [String : Any]
+        
+        
+        let toPut = ref.child("Users").child((Auth.auth().currentUser?.uid)!).child("Chats").child(conversator.id).childByAutoId()
+        let toPut2 = ref.child("Users").child(conversator.id).child("Chats").child((Auth.auth().currentUser?.uid)!).childByAutoId()
+
+        toPut.setValue(message)
+        toPut2.setValue(message)
+        
+        inputTextField.text = ""
+    
+        
+        
+    }
+    
         
     }
     
@@ -210,23 +285,23 @@ let keyboardRectangle = keyboardFrame.cgRectValue
     
     let size = CGSize(width: 250,  height:1000)
     let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
-    let estimatedFrame = NSString(string: arrayka[indexPath.row]).boundingRect(with: size, options: options, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18)], context: nil)
+    let estimatedFrame = NSString(string: arrayka[indexPath.row].message).boundingRect(with: size, options: options, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18)], context: nil)
     
     
     
-    if (indexPath.row == 0 ) {
+    if (arrayka[indexPath.row].personA == Auth.auth().currentUser?.uid ) {
         cell.messageTextView.frame = CGRect(x:view.frame.maxX-48-8-20-estimatedFrame.width
             , y:0, width:estimatedFrame.width + 16, height:estimatedFrame.height + 15)
         cell.boolFlag = true
         
         
         
-        cell.messageTextView.text = arrayka[indexPath.row]
+        cell.messageTextView.text = arrayka[indexPath.row].message
     }
     else {
     
     
-    cell.messageTextView.text = arrayka[indexPath.row]
+    cell.messageTextView.text = arrayka[indexPath.row].message
     cell.messageTextView.frame = CGRect(x:48 + 8, y:0, width:estimatedFrame.width + 16, height:estimatedFrame.height + 15)
         
 cell.changeReceiver()
@@ -236,7 +311,7 @@ cell.changeReceiver()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let message = arrayka[indexPath.row]
+        let message = arrayka[indexPath.row].message
         
         
         let size = CGSize(width:250, height:1000)

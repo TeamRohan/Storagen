@@ -12,15 +12,16 @@ import Foundation
 
 class ChatClass {
     
-    let chatID: String?
-    let personA: String?
-    let personB: String?
+    let message: String
+    let personA: String
+    let personB: String
     
     
-    init(chatID: String, personA: String, personB: String) {
-        self.chatID = chatID
+    init( personA: String, personB: String, message: String) {
         self.personA = personA
         self.personB = personB
+        self.message = message
+
     }
     
     

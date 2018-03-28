@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+import FirebaseAuth
 import LBTAComponents
 
 class Chat: UITableViewController {
 
     
-    var arrayka = ["Kyle"]
+    var arrayka = [chatUser]()
     
-    
+    var ref: DatabaseReference!
 
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
@@ -24,15 +27,52 @@ class Chat: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
- navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black]
+        self.view.backgroundColor = UIColor(displayP3Red: 21/255, green: 24/255, blue: 33/255, alpha: 1)
+        self.tableView.backgroundColor = UIColor(displayP3Red: 21/255, green: 24/255, blue: 33/255, alpha: 1)
+        
+        ref = Database.database().reference()
 
-        
+ navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black]
+        self.navigationItem.title = "Chats"
+
+        tableView.separatorColor = .black
+
         tableView.register(chatCell.self, forCellReuseIdentifier: "chatCell")
-        
+        fetchData()
         
     }
     
+    
 
+    
+    func fetchData() {
+        ref.child("Users").child((Auth.auth().currentUser?.uid)!).child("Conversations").observe( .value, with:
+            { (snapshot) in
+                self.arrayka = []
+                guard let value = snapshot.value as? NSDictionary else { return }
+                for (id, obj) in value {
+                    if let userId = id as? String {
+                        self.ref.child("Users").child(userId).child("mail").observe(.value, with: {(snapshot)
+                            in
+                    let lol = chatUser(id: userId, mail: snapshot.value as! String, name: "")
+                            self.arrayka.append(lol)
+                            self.tableView.reloadData()
+                            
+                            
+                        })
+                        
+                    }
+             
+              
+                }
+                
+            
+        })
+        { (error) in
+            print(error.localizedDescription)
+        }
+        
+    }
 
   
 
@@ -54,7 +94,7 @@ class Chat: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath) as! chatCell
         cell.selectionStyle = .none
         // Configure the cell...
 
@@ -63,7 +103,7 @@ class Chat: UITableViewController {
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
         let estimatedFrame = NSString(string:  "CUSTOM").boundingRect(with: size, options: options, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18)], context: nil)
         
-      
+      cell.name.text = arrayka[indexPath.row].mail
         
         return cell
     }
@@ -117,14 +157,14 @@ class chatCell: UITableViewCell {
         return textView
     }()
     
-    let name: UITextView = {
+    var name: UITextView = {
      let textView = UITextView()
         textView.font = UIFont.systemFont(ofSize: 22)
         textView.backgroundColor = UIColor.clear
         textView.isEditable = false
         textView.isScrollEnabled = false
+        textView.textColor = .white
         textView.isSelectable = false
-        textView.text = "KYLE"
         return textView
         
         
@@ -136,7 +176,8 @@ class chatCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.backgroundColor = .red
+        self.backgroundColor = UIColor(displayP3Red: 21/255, green: 24/255, blue: 33/255, alpha: 1)
+        
         
         setupCellUI()
         

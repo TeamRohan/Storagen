@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
+import FirebaseDatabase
+
 
 class PropertyDetailController: UIViewController {
     
     var property: Property!
+    var ref: DatabaseReference!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-   
+        print(property.propertyOwnerId)
+        ref = Database.database().reference()
+
     
         let dan = UIBarButtonItem(title: "Chat", style: .done, target: self, action: #selector(chatMe))
         
@@ -25,8 +32,13 @@ class PropertyDetailController: UIViewController {
     }
     
     @objc func chatMe() {
+        ref.child("Users").child((Auth.auth().currentUser?.uid)!).child("Conversations").child(property.propertyOwnerId).child("Active?").setValue("true")
         
-        print("IT DOES SHIT")
+        ref.child("Users").child(property.propertyOwnerId).child("Conversations").child((Auth.auth().currentUser?.uid)!).child("Active?").setValue("true")
+        
+        
+
+    
     }
 
     override func didReceiveMemoryWarning() {
