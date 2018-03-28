@@ -12,8 +12,6 @@ Create a simple messenger app for the lender and occupier to connect and message
 
 Create notifications to allow lenders and occupiers to receive live updates.
 
-Display location of storage space on a map using an API.
-
 Wireframing
 
 Link: https://www.fluidui.com/editor/live/preview/cF9EUlRtUXRXV2hXaWZrNnpxVDh1YzFsU0Y4V0ljT2c1Zg==
