@@ -43,10 +43,7 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("hrt")
-        let nav = PropertyDetailController()
-        nav.property = properties[indexPath.row]
-        self.navigationController?.pushViewController(nav, animated: true)
-//        propertiesTableView.deselectRow(at: indexPath, animated: false)
+        propertiesTableView.deselectRow(at: indexPath, animated: false)
     }
 
     @IBOutlet weak var propertiesTableView: UITableView!
@@ -81,6 +78,9 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
         
         
         self.navigationItem.rightBarButtonItem = dan
+        
+        self.navigationController?.navigationBar.barStyle = .blackTranslucent
+        self.navigationController?.navigationBar.tintColor = UIColor.init(displayP3Red: 224/255, green: 167/255, blue: 61/255, alpha: 1)
     }
     
     @objc func addProperty() {
@@ -134,8 +134,7 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
         if(segue.identifier == "propDetailSegue") {
             let controller = segue.destination as! PropertyDetailController
             let clickedCell = sender as! PropertiesCell
-    
-//            controller.property = properties[clickedCell.]
+            controller.property = clickedCell.property
         }
     }
 

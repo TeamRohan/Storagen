@@ -18,6 +18,8 @@ class PropertiesCell: UITableViewCell {
     @IBOutlet weak var propertyImage: UIImageView!
     @IBOutlet weak var sView: UIView!
     
+    var property: Property!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         let opaqueColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.9)
@@ -41,10 +43,11 @@ class PropertiesCell: UITableViewCell {
     }
     
     func bindObject(obj: Property) {
+        self.property = obj
         self.propertyAddress.text = obj.propertyAddress
         self.propertySize.text = obj.propertySize
         self.propertyDescription.text = obj.propertyDescription
-        self.propertyImage.af_setImage(withURL: obj.propertyImageUrl)
+        self.propertyImage.af_setImage(withURL: obj.propertyImageUrl!)
     }
 
 }

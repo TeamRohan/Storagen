@@ -14,7 +14,7 @@ class Property {
     var propertyAddress: String
     var propertySize: String
     var propertyDescription: String
-    var propertyImageUrl: URL
+    var propertyImageUrl: URL?
     var propertyStartDate: Date
     var propertyEndDate: Date
     var propertyPrice: String
