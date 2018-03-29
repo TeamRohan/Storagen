@@ -27,6 +27,7 @@ class CustomTabControllerViewController: UITabBarController {
         propsController.tabBarItem.title = "Properties"
         let chatController = UINavigationController(rootViewController: Chat())
         chatController.tabBarItem.title = "Messages"
+        chatController.tabBarItem.image = #imageLiteral(resourceName: "ic_messages")
         viewControllers = [navigationController, chatController]
         // Do any additional setup after loading the view.
     }

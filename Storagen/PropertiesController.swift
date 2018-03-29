@@ -14,7 +14,7 @@ import FirebaseDatabase
 
 class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var CELL_PADDING = 20 as CGFloat
+    var CELL_PADDING = 10 as CGFloat
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return properties.count
@@ -31,8 +31,9 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let propertyCell = self.propertiesTableView.dequeueReusableCell(withIdentifier: "propertyCell" ,for:indexPath) as! PropertiesCell
         propertyCell.selectionStyle = .default
-        propertyCell.bindObject(obj: properties[indexPath.section])
+        propertyCell.bindObject(obj: self.properties[indexPath.section])
         return propertyCell
+        
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

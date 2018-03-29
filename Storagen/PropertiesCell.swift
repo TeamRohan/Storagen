@@ -8,6 +8,8 @@
 
 import UIKit
 import AlamofireImage
+import Firebase
+import FirebaseDatabase
 
 class PropertiesCell: UITableViewCell {
     
@@ -22,7 +24,7 @@ class PropertiesCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        let opaqueColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.9)
+        let opaqueColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.7)
         self.contentView.layer.backgroundColor = opaqueColor.cgColor
         self.sView.layer.cornerRadius = 16
         self.contentView.layer.cornerRadius = 16

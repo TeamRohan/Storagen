@@ -41,6 +41,21 @@ class PropertyDetailController: UIViewController {
         startDateLabel.text = "\(prop.propertyStartDate)"
         endDateLabel.text = "\(prop.propertyEndDate)"
         ownerLabel.text = prop.propertyOwnerId
+        ref.child("Users").child(property.propertyOwnerId).observe(.value, with:
+            { (snapshot) in
+                guard let value = snapshot.value as? NSDictionary else { return }
+                for (id, val) in value {
+                    if(id as! String == "name") {
+                        DispatchQueue.main.async {
+                            self.ownerLabel.text = val as! String
+                        }
+                        return
+                    }
+                }
+        })
+        { (error) in
+            print(error.localizedDescription)
+        }
         propertyImage.af_setImage(withURL: url)
         let dan = UIBarButtonItem(title: "Chat Me", style: .done, target: self, action: #selector(chatMe))
         self.navigationItem.rightBarButtonItem = dan

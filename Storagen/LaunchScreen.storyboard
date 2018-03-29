@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CHN-ro-3Pk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="YL8-4N-G1Y">
+            <objects>
+                <viewController id="CHN-ro-3Pk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ht6-gH-Dyl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StoragenLogo" translatesAutoresizingMaskIntoConstraints="NO" id="8mb-3o-kqp">
+                                <rect key="frame" x="-53" y="93" width="480" height="480"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="480" id="0P9-j3-Pp4"/>
+                                    <constraint firstAttribute="height" constant="480" id="l4C-G5-aMp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2018 Team Rohan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xx8-o1-sfU">
+                                <rect key="frame" x="8" y="630" width="359" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.87843137250000003" green="0.65490196079999996" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mEv-hu-lCP" firstAttribute="bottom" secondItem="xx8-o1-sfU" secondAttribute="bottom" constant="8" id="4Ee-iE-gRQ"/>
+                            <constraint firstItem="mEv-hu-lCP" firstAttribute="trailing" secondItem="xx8-o1-sfU" secondAttribute="trailing" constant="8" id="7AB-AN-ptW"/>
+                            <constraint firstItem="xx8-o1-sfU" firstAttribute="leading" secondItem="mEv-hu-lCP" secondAttribute="leading" constant="8" id="Gnp-M7-0aV"/>
+                            <constraint firstItem="xx8-o1-sfU" firstAttribute="centerX" secondItem="Ht6-gH-Dyl" secondAttribute="centerX" id="Qet-q6-uAa"/>
+                            <constraint firstItem="8mb-3o-kqp" firstAttribute="centerX" secondItem="Ht6-gH-Dyl" secondAttribute="centerX" id="T0B-cI-OIc"/>
+                            <constraint firstItem="8mb-3o-kqp" firstAttribute="centerY" secondItem="Ht6-gH-Dyl" secondAttribute="centerY" id="TLE-Gl-eFd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mEv-hu-lCP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dun-aR-Sn5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-298.39999999999998" y="-40.029985007496258"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="StoragenLogo" width="7500" height="7500"/>
+    </resources>
+</document>
