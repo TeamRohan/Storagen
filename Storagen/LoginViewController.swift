@@ -8,7 +8,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = UIColor(displayP3Red: 21/255, green: 24/255, blue: 33/255, alpha: 1)
         self.navigationController?.navigationBar.isHidden = true
         // Do any additional setup after loading the view.
     }
