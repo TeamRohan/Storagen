@@ -15,8 +15,8 @@ class Property {
     var propertySize: String
     var propertyDescription: String
     var propertyImageUrl: URL?
-    var propertyStartDate: Date
-    var propertyEndDate: Date
+    var propertyStartDate: String
+    var propertyEndDate: String
     var propertyPrice: String
     var propertyLatitude: String
     var propertyLongitude: String
@@ -29,7 +29,7 @@ class Property {
         self.propertySize = propertySize
         self.propertyDescription = propertyDescription
         self.propertyImageUrl = URL(string: imageUrl)!
-        self.propertyStartDate = Date()
+        self.propertyStartDate = ""
         self.propertyEndDate = propertyStartDate
         self.propertyPrice = ""
         self.propertyLatitude = "1.0"
@@ -43,10 +43,8 @@ class Property {
         self.propertySize = dictionary["size"] as! String
         self.propertyDescription = dictionary["description"] as! String
         self.propertyImageUrl = URL(string: dictionary["imageUrl"] as! String)!
-//        self.propertyStartDate = dictionary["startDate"] as! Date
-//        self.propertyEndDate = dictionary["endDate"] as! Date
-        self.propertyStartDate = Date()
-        self.propertyEndDate = propertyStartDate
+        self.propertyStartDate = dictionary["startDate"] as! String
+        self.propertyEndDate = dictionary["endDate"] as! String
         self.propertyPrice = dictionary["price"] as! String
         self.propertyLatitude = dictionary["latitude"] as! String
         self.propertyLongitude = dictionary["longitude"] as! String
