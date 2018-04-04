@@ -14,6 +14,8 @@
 		9D4C1513206C4A160086D15B /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4C1512206C4A160086D15B /* Chat.swift */; };
 		9D4C1515206C4A260086D15B /* Chatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4C1514206C4A260086D15B /* Chatter.swift */; };
 		9D4C1517206C4A3A0086D15B /* ChatClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4C1516206C4A3A0086D15B /* ChatClass.swift */; };
+		9D4C1519206C4FB20086D15B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4C1518206C4FB20086D15B /* LaunchScreen.storyboard */; };
+		9D4C151B206C54170086D15B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4C151A206C54170086D15B /* UIKit.framework */; };
 		9D5A03312065923900F62486 /* MainPageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5A03302065923900F62486 /* MainPageStoryboard.storyboard */; };
 		9D5A03332065936800F62486 /* PropertiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A03322065936800F62486 /* PropertiesController.swift */; };
 		9D5A033520671C0000F62486 /* PropertiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A033420671C0000F62486 /* PropertiesCell.swift */; };
@@ -67,6 +69,8 @@
 		9D4C1512206C4A160086D15B /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		9D4C1514206C4A260086D15B /* Chatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chatter.swift; sourceTree = "<group>"; };
 		9D4C1516206C4A3A0086D15B /* ChatClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatClass.swift; sourceTree = "<group>"; };
+		9D4C1518206C4FB20086D15B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9D4C151A206C54170086D15B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9D5A03302065923900F62486 /* MainPageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPageStoryboard.storyboard; sourceTree = "<group>"; };
 		9D5A03322065936800F62486 /* PropertiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesController.swift; sourceTree = "<group>"; };
 		9D5A033420671C0000F62486 /* PropertiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesCell.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4C151B206C54170086D15B /* UIKit.framework in Frameworks */,
 				AFA4E1F92936737C2A789868 /* Pods_Storagen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +146,7 @@
 		46D95D4A0950B7F52DC695F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D4C151A206C54170086D15B /* UIKit.framework */,
 				B9801BE5043C0E0B4D925766 /* Pods_Storagen.framework */,
 				604DF38216F30E9AED72B6AA /* Pods_StoragenTests.framework */,
 				0FC6728A0C5E21B855FA21F4 /* Pods_StoragenUITests.framework */,
@@ -197,6 +203,7 @@
 				9D4C1512206C4A160086D15B /* Chat.swift */,
 				9D4C1514206C4A260086D15B /* Chatter.swift */,
 				9D4C1516206C4A3A0086D15B /* ChatClass.swift */,
+				9D4C1518206C4FB20086D15B /* LaunchScreen.storyboard */,
 			);
 			path = Storagen;
 			sourceTree = "<group>";
@@ -338,6 +345,7 @@
 				9DD9BA5C202BC14C0019E7F1 /* Main.storyboard in Resources */,
 				D598AA582044D65500AE3520 /* GoogleService-Info.plist in Resources */,
 				9D4C150B206C25410086D15B /* Assets.xcassets in Resources */,
+				9D4C1519206C4FB20086D15B /* LaunchScreen.storyboard in Resources */,
 				9D5A03312065923900F62486 /* MainPageStoryboard.storyboard in Resources */,
 				9D4C1511206C2F110086D15B /* Nikhil.storyboard in Resources */,
 			);
