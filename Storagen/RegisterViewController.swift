@@ -14,7 +14,6 @@ import FirebaseDatabase
 class RegisterViewController: UIViewController {
     
     @IBOutlet var email: UITextField!
-    @IBOutlet var confirmEmail: UITextField!
     @IBOutlet var password: UITextField!
     @IBOutlet var confirmPassword: UITextField!
     @IBOutlet var name: UITextField!
@@ -62,14 +61,14 @@ class RegisterViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
             
         }
-        else if(email.text != confirmEmail.text) {
+        /*else if(email.text != confirmEmail.text) {
             let alertController = UIAlertController(title: "Error", message: "Emails do not match", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
                 
             }
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: nil)
-        }
+        }*/
         else if(password.text != confirmPassword.text) {
             let alertController = UIAlertController(title: "Error", message: "Passwords do not match", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
@@ -141,6 +140,7 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(displayP3Red: 21/255, green: 24/255, blue: 33/255, alpha: 1)
         
         ref = Database.database().reference()
         
