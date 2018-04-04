@@ -43,9 +43,29 @@ UINavigationControllerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor.black
+        
         ref = Database.database().reference()
         pref = Storage.storage().reference()
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black]
+        
+        startDateTextView.clipsToBounds = true;
+        startDateTextView.layer.cornerRadius = 4;
+        
+        endDateTextView.clipsToBounds = true;
+        endDateTextView.layer.cornerRadius = 4;
+        
+        propertySizeTextField.attributedPlaceholder = NSAttributedString(string: "60 x 60", attributes: [NSAttributedStringKey.foregroundColor: startDateTextView.placeholderColor])
+        
+        addressTextField.attributedPlaceholder = NSAttributedString(string: "1165, West Stadium Ave, IN 47906", attributes: [NSAttributedStringKey.foregroundColor: startDateTextView.placeholderColor])
+        
+        descriptionTextField.attributedPlaceholder = NSAttributedString(string: "Great building", attributes: [NSAttributedStringKey.foregroundColor: startDateTextView.placeholderColor])
+        
+        pricePerNightTextField.attributedPlaceholder = NSAttributedString(string: "$20", attributes: [NSAttributedStringKey.foregroundColor: startDateTextView.placeholderColor])
+        
+        propertImageView.clipsToBounds = true;
+        propertImageView.layer.cornerRadius = 4;
+        
         
         createDatePicker();
         createDatePicker2();
@@ -164,8 +184,78 @@ UINavigationControllerDelegate{
         let today : String!
         today = getTodayString();
         
+        guard let propertyTest = propertySizeTextField.text, !propertyTest.isEmpty else {
+            let alertController = UIAlertController(title: "Error", message: "Please enter a property", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+                
+            }
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        guard let addressTest = addressTextField.text, !addressTest.isEmpty else {
+            let alertController = UIAlertController(title: "Error", message: "Please enter address", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+                
+            }
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        guard let descriptionTest = descriptionTextField.text, !descriptionTest.isEmpty else {
+            let alertController = UIAlertController(title: "Error", message: "Please enter description", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+                
+            }
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        guard let priceTest = pricePerNightTextField.text, !priceTest.isEmpty else {
+            let alertController = UIAlertController(title: "Error", message: "Please enter price", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+                
+            }
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        guard let startTest = startDateTextView.text, !startTest.isEmpty else {
+            let alertController = UIAlertController(title: "Error", message: "Please enter start date", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+                
+            }
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        guard let endTest = endDateTextView.text, !endTest.isEmpty else {
+            let alertController = UIAlertController(title: "Error", message: "Please enter end date", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+                
+            }
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        
+        
         //let propertyRef = pref.child("images/property.jpg");
-        guard let img = propertImageView.image else { return }
+        guard let img = propertImageView.image else {
+            let alertController = UIAlertController(title: "Error", message: "Please add image", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+                
+            }
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
         let uploadData = UIImagePNGRepresentation(img)
         
         let uuid = SwiftyUUID.UUID()
