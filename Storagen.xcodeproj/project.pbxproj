@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D16801D2075907200E382D0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D16801C2075907200E382D0 /* MapViewController.swift */; };
+		9D16801F2075909400E382D0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D16801E2075909400E382D0 /* MapKit.framework */; };
 		9D4C150B206C25410086D15B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4C150A206C25410086D15B /* Assets.xcassets */; };
 		9D4C150D206C2E910086D15B /* AddANewPropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4C150C206C2E910086D15B /* AddANewPropertyViewController.swift */; };
 		9D4C150F206C2EBE0086D15B /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4C150E206C2EBE0086D15B /* LocationSearchTable.swift */; };
@@ -62,6 +64,8 @@
 		2D9BB41EA3AB461B39ED8674 /* Pods-StoragenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoragenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoragenTests/Pods-StoragenTests.debug.xcconfig"; sourceTree = "<group>"; };
 		604DF38216F30E9AED72B6AA /* Pods_StoragenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoragenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		926170DAB081F5DD3D22FA7E /* Pods-Storagen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Storagen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Storagen/Pods-Storagen.debug.xcconfig"; sourceTree = "<group>"; };
+		9D16801C2075907200E382D0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		9D16801E2075909400E382D0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9D4C150A206C25410086D15B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D4C150C206C2E910086D15B /* AddANewPropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddANewPropertyViewController.swift; sourceTree = "<group>"; };
 		9D4C150E206C2EBE0086D15B /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D16801F2075909400E382D0 /* MapKit.framework in Frameworks */,
 				9D4C151B206C54170086D15B /* UIKit.framework in Frameworks */,
 				AFA4E1F92936737C2A789868 /* Pods_Storagen.framework in Frameworks */,
 			);
@@ -146,6 +151,7 @@
 		46D95D4A0950B7F52DC695F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D16801E2075909400E382D0 /* MapKit.framework */,
 				9D4C151A206C54170086D15B /* UIKit.framework */,
 				B9801BE5043C0E0B4D925766 /* Pods_Storagen.framework */,
 				604DF38216F30E9AED72B6AA /* Pods_StoragenTests.framework */,
@@ -204,6 +210,7 @@
 				9D4C1514206C4A260086D15B /* Chatter.swift */,
 				9D4C1516206C4A3A0086D15B /* ChatClass.swift */,
 				9D4C1518206C4FB20086D15B /* LaunchScreen.storyboard */,
+				9D16801C2075907200E382D0 /* MapViewController.swift */,
 			);
 			path = Storagen;
 			sourceTree = "<group>";
@@ -550,6 +557,7 @@
 				9D4C150F206C2EBE0086D15B /* LocationSearchTable.swift in Sources */,
 				9D5A033720671F5A00F62486 /* Property.swift in Sources */,
 				9DD9BA59202BC14C0019E7F1 /* ViewController.swift in Sources */,
+				9D16801D2075907200E382D0 /* MapViewController.swift in Sources */,
 				9D4C1517206C4A3A0086D15B /* ChatClass.swift in Sources */,
 				9D5A03332065936800F62486 /* PropertiesController.swift in Sources */,
 				9D5A033520671C0000F62486 /* PropertiesCell.swift in Sources */,
