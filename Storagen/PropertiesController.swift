@@ -147,6 +147,10 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
             let clickedCell = sender as! PropertiesCell
             controller.property = clickedCell.property
         }
+        if(segue.identifier == "mapSegue") {
+            let controller = segue.destination as! MapViewController
+            controller.properties = properties
+        }
     }
 
 }
