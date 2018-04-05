@@ -28,6 +28,23 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
         return CELL_PADDING
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if(editingStyle == UITableViewCellEditingStyle.delete){
+            var theDeletePropertyId = properties[indexPath.row].propertyId
+            var theDeleteUserPropertyId = (properties[indexPath.row].propertyOwnerId)
+            print("Property Id: \(theDeletePropertyId)")
+            print("Property User Id: \(theDeleteUserPropertyId)")
+            self.ref.child("Properties").child(theDeletePropertyId).removeValue()
+            self.ref.child("Users").child(theDeleteUserPropertyId).child("properties").child(theDeletePropertyId).removeValue()
+            properties.remove(at: indexPath.row)
+            self.propertiesTableView.reloadData()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let propertyCell = self.propertiesTableView.dequeueReusableCell(withIdentifier: "propertyCell" ,for:indexPath) as! PropertiesCell
         propertyCell.selectionStyle = .default
@@ -101,7 +118,6 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
         ref.child("Properties").observe(.value, with:
             { (snapshot) in
                 guard let value = snapshot.value as? NSDictionary else { return }
-                
                 
                 self.properties = []
                 for (id, obj) in value {
