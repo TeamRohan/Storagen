@@ -20,6 +20,8 @@ class PropertiesCell: UITableViewCell {
     @IBOutlet weak var propertyImage: UIImageView!
     @IBOutlet weak var sView: UIView!
     
+    var navController: UINavigationController!
+    
     var property: Property!
     
     override func awakeFromNib() {
@@ -51,5 +53,11 @@ class PropertiesCell: UITableViewCell {
         self.propertyDescription.text = obj.propertyDescription
         self.propertyImage.af_setImage(withURL: obj.propertyImageUrl!)
     }
-
+    @IBAction func onUpdate(_ sender: Any) {
+        let storyboard : UIStoryboard = UIStoryboard(name: "Nikhil", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AddNewController") as! AddANewPropertyViewController
+        vc.currentProperty = property
+        navController?.pushViewController(vc, animated: true)
+    }
+    
 }
