@@ -27,6 +27,7 @@ UINavigationControllerDelegate{
     @IBOutlet weak var startDateTextView: RSKPlaceholderTextView!
     @IBOutlet weak var propertImageView: UIImageView!
     
+    @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var pricePerNightTextField: UITextField!
     
     var properAddress = "";
@@ -38,6 +39,8 @@ UINavigationControllerDelegate{
     
     var ref: DatabaseReference!
     var pref: StorageReference!
+    
+    var currentProperty: Property!
     
     
     override func viewDidLoad() {
@@ -69,6 +72,16 @@ UINavigationControllerDelegate{
         
         createDatePicker();
         createDatePicker2();
+        
+        guard let newProp = currentProperty else { return }
+        propertySizeTextField.text = newProp.propertySize
+        addressTextField.text = newProp.propertyAddress
+        descriptionTextField.text = newProp.propertyDescription
+        endDateTextView.text = newProp.propertyEndDate
+        startDateTextView.text = newProp.propertyStartDate
+        pricePerNightTextField.text = newProp.propertyPrice
+        propertImageView.af_setImage(withURL: newProp.propertyImageUrl!)
+        navigationItem.title = "Update Property"
         
         // Do any additional setup after loading the view.
     }
@@ -292,9 +305,14 @@ UINavigationControllerDelegate{
                                   "size": self.propertySizeTextField.text, "address": self.addressTextField.text!, "description": self.descriptionTextField.text!, "startDate": self.startDateTextView.text!, "endDate": self.endDateTextView.text!, "price": self.pricePerNightTextField.text!, "Timestamp": today!, "latitude": String(describing: lat), "longitude": String(describing: lon),
                                   "imageUrl": imageUrl] as [String : Any]
                     let ID2 = SwiftyUUID.UUID()
-                    let IDSTRING = ID2.CanonicalString()
-                    self.ref.child("Users").child((Auth.auth().currentUser?.uid)!).child("properties").child(IDSTRING).setValue(values)
-                    self.ref.child("Properties").child(IDSTRING).setValue(values)
+                    guard let newProp = self.currentProperty else {
+                        let IDSTRING = ID2.CanonicalString()
+                        self.ref.child("Users").child((Auth.auth().currentUser?.uid)!).child("properties").child(IDSTRING).setValue(values)
+                        self.ref.child("Properties").child(IDSTRING).setValue(values)
+                        return
+                    }
+                    self.ref.child("Users").child((Auth.auth().currentUser?.uid)!).child("properties").child(newProp.propertyId).setValue(values)
+                    self.ref.child("Properties").child(newProp.propertyId).setValue(values)
                 }
                 
             }

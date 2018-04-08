@@ -73,7 +73,20 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Anf-P8-C1T" userLabel="sView">
                                                     <rect key="frame" x="19" y="15" width="305" height="128"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Er1-kI-1pH">
+                                                            <rect key="frame" x="8" y="0.0" width="51" height="30"/>
+                                                            <color key="tintColor" red="0.87843137250000003" green="0.65490196079999996" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <state key="normal" title="Update"/>
+                                                            <connections>
+                                                                <action selector="onUpdate:" destination="ihC-CI-ldq" eventType="touchUpInside" id="Nv1-Tu-G1W"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Er1-kI-1pH" firstAttribute="leading" secondItem="Anf-P8-C1T" secondAttribute="leading" constant="8" id="BXe-dk-KYq"/>
+                                                    </constraints>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ahH-Wn-uRB">
                                                     <rect key="frame" x="27" y="47" width="64" height="64"/>
@@ -143,6 +156,7 @@
                                             <rect key="contentStretch" x="0.0" y="0.0" width="0.90000000000000002" height="1"/>
                                             <constraints>
                                                 <constraint firstItem="ahH-Wn-uRB" firstAttribute="leading" secondItem="Anf-P8-C1T" secondAttribute="leading" constant="8" id="1gx-76-ctF"/>
+                                                <constraint firstItem="Er1-kI-1pH" firstAttribute="bottom" secondItem="ahH-Wn-uRB" secondAttribute="top" constant="2" id="7pa-cR-fbp"/>
                                                 <constraint firstItem="bA2-C8-tel" firstAttribute="leading" secondItem="ahH-Wn-uRB" secondAttribute="trailing" constant="8" id="D0M-Wt-A9S"/>
                                                 <constraint firstItem="bA2-C8-tel" firstAttribute="top" secondItem="Anf-P8-C1T" secondAttribute="top" constant="8" id="Lks-ee-oOv"/>
                                                 <constraint firstItem="Anf-P8-C1T" firstAttribute="top" secondItem="FMV-jP-Skk" secondAttribute="topMargin" constant="4" id="Xam-Cc-BsH"/>

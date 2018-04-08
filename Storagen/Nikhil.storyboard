@@ -229,6 +229,7 @@
                     <connections>
                         <outlet property="addressTextField" destination="Y9K-IW-iAt" id="mKH-Bg-hXl"/>
                         <outlet property="descriptionTextField" destination="ET5-PQ-AR0" id="7IS-aC-GKd"/>
+                        <outlet property="doneButton" destination="J4c-RL-Cul" id="5EU-fc-NLu"/>
                         <outlet property="endDateTextView" destination="QX3-Gn-plc" id="szE-GJ-2BQ"/>
                         <outlet property="pricePerNightTextField" destination="R09-bD-dWb" id="Z5M-tf-x9r"/>
                         <outlet property="propertImageView" destination="CJw-J4-iGP" id="Dce-Xn-dTx"/>

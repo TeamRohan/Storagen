@@ -49,6 +49,8 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
         let propertyCell = self.propertiesTableView.dequeueReusableCell(withIdentifier: "propertyCell" ,for:indexPath) as! PropertiesCell
         propertyCell.selectionStyle = .default
         propertyCell.bindObject(obj: self.properties[indexPath.section])
+        propertyCell.property = self.properties[indexPath.section]
+        propertyCell.navController = navigationController
         return propertyCell
         
     }
