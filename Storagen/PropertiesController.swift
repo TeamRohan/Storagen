@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseStorage
 import FirebaseDatabase
+import FirebaseAuth
 
 
 class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -33,6 +34,13 @@ class PropertiesController: UIViewController, UITableViewDelegate, UITableViewDa
         propertyCell.selectionStyle = .default
         propertyCell.bindObject(obj: self.properties[indexPath.section])
         propertyCell.property = self.properties[indexPath.section]
+        print("OWNER ID: \(propertyCell.property.propertyOwnerId): CURRENT USER: \(Auth.auth().currentUser?.uid ?? "nothing")")
+        if(propertyCell.property.propertyOwnerId == Auth.auth().currentUser?.uid) {
+            propertyCell.updateButton.isHidden = false
+        }
+        else {
+            propertyCell.updateButton.isHidden = true
+        }
         propertyCell.navController = navigationController
         return propertyCell
         

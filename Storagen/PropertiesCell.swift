@@ -20,6 +20,7 @@ class PropertiesCell: UITableViewCell {
     @IBOutlet weak var propertyImage: UIImageView!
     @IBOutlet weak var sView: UIView!
     
+    @IBOutlet weak var updateButton: UIButton!
     var navController: UINavigationController!
     
     var property: Property!
